@@ -72,7 +72,7 @@ gator agg [interval]
 ```
 
 Where `[interval]` is the time between fetching the most recent feeds from the source and is formatted as `1s`, `1m`, `1h` or a combination (e.g. `1h37m22s`).
-*Tip: Beconsiderate and avoid overly frequent fetch intervals to prevent spamming source servers.* You can leave this terminal running in the background to continuously update with new posts from each feed. Use a new terminal window to run other commands while aggregation is ongoing..
+*Tip: Be considerate and avoid overly frequent fetch intervals to prevent spamming source servers.* You can leave this terminal running in the background to continuously update with new posts from each feed. Use a new terminal window to run other commands while aggregation is ongoing.
 
 4. Browse your posts:
 
@@ -111,11 +111,19 @@ gator following
 #lists all feeds current user is following
 
 gator unfollow <url>
-#required url, current user will no longer recieve updates from feed
+#required url, current user will no longer receive updates from feed
 
 gator browse [num_feeds]
 #optional num_feeds(default: 2), displays given number of posts from followed feeds.
 
 gator reset
-#WARNING: This will premanently erase all users, feeds, and posts!
+#WARNING: This will permanently erase all users, feeds, and posts!
 ```
+
+## Issues & Feedback
+
+If you have questions, encounter problems, or have suggestions for improvements, please open an issue on the [GitHub Issues page](https://github.com/TheJa750/Gator/issues).
+
+Pull requests and contributions are also welcome!
+
+Thank you for helping make Feed AggreGATOR better.
