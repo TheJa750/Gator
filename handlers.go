@@ -51,7 +51,7 @@ func handlerRegister(s *state, cmd command) error {
 		Name:      cmd.args[0],
 	}
 
-	u, err := s.db.CreateUser(context.Background(), params)
+	_, err = s.db.CreateUser(context.Background(), params)
 	if err != nil {
 		return err
 	}
@@ -63,7 +63,7 @@ func handlerRegister(s *state, cmd command) error {
 		return err
 	}
 
-	fmt.Println(u)
+	//fmt.Println(u)
 
 	return nil
 }

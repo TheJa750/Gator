@@ -12,20 +12,18 @@ import (
 )
 
 func main() {
+	cfg, err := config.Read()
+	for err != nil {
+		config.RestoreDefaultCfg()
+		cfg, err = config.Read()
+	}
+
 	/*
 		cfg, err := config.Read()
-		for err != nil {
-			config.RestoreDefaultCfg()
-			cfg, err = config.Read()
+		if err != nil {
+			log.Fatalf("error reading config file: %v", err)
 		}
-
-		fmt.Println(cfg)
 	*/
-
-	cfg, err := config.Read()
-	if err != nil {
-		log.Fatalf("error reading config file: %v", err)
-	}
 
 	s := state{
 		cfg: &cfg,
